@@ -28,7 +28,7 @@ DEBUG = True
 ALLOWED_HOSTS = []
 
 # Authentication Model
-AUTH_USER_MODEL = 'authentication.User'
+AUTH_USER_MODEL = 'authentication.CustomUser'
 
 # Application definition
 
@@ -39,8 +39,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'authentication',
     'sector',
+    'authentication',
     'organisation',
 ]
 
@@ -133,3 +133,19 @@ STATICFILES_DIRS = [
 # Media File Config and Collect
 MEDIA_URL = '/media/'
 MEDIA_ROOT = BASE_DIR / 'media'
+
+
+# STMP Configuration
+EMAIL_BACKEND = "django.core.mail.backends.smtp.EmailBackend"
+EMAIL_USE_TLS = True
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_HOST_USER = 'monirhossain420708@gmail.com'
+# EMAIL_HOST_PASSWORD = 'txvbmvracfbwdjnu'
+EMAIL_HOST_PASSWORD = 'monir@sifat23'
+EMAIL_PORT = 587
+
+# EMAIL_USE_TLS = True
+# EMAIL_HOST = 'mail.mksifat.xyz'
+# EMAIL_HOST_USER = 'contact@mksifat.xyz'
+# EMAIL_HOST_PASSWORD = 'monir@sifat23'
+# EMAIL_PORT = 465

@@ -33,20 +33,20 @@
 <body class="body-bg-color">
     <div class="wrapper">
         <div class="form-body">
-            <form action="{% url 'login' %}" method="post" class="col-form" novalidate>
+            <form action="{% url 'activated' %}" method="post" class="col-form" novalidate>
                 {% csrf_token %}
                 <div class="col-logo"><a href="{% url 'dashboard' %}"><img alt=""
                             src="{% static 'dist/img/logo-lg.png' %}"></a>
                 </div>
-                <header>Tau Research Login</header>
+                <header>Tau Research ORG Password Set</header>
                 <fieldset>
-                    <section>
+                    <!-- <section>
                         <div class="form-group has-feedback">
                             <label class="control-label">E-mail</label>
                             <input class="form-control" placeholder="E-mail" name="username" type="text">
                             <span class="fa fa-envelope form-control-feedback" aria-hidden="true"></span>
                         </div>
-                    </section>
+                    </section> -->
                     <section>
                         <div class="form-group has-feedback">
                             <label class="control-label">Password</label>
@@ -55,6 +55,13 @@
                         </div>
                     </section>
                     <section>
+                        <div class="form-group has-feedback">
+                            <label class="control-label">Confirm Password</label>
+                            <input class="form-control" placeholder="Password" name="cpassword" type="password">
+                            <span class="fa fa-lock form-control-feedback" aria-hidden="true"></span>
+                        </div>
+                    </section>
+                    <!-- <section>
                         <div class="row">
                             <div class="col-md-6 checkbox"> <a href="forgot-password.html" class="modal-opener">Forgot
                                     password?</a> </div>
@@ -64,10 +71,10 @@
                                     <i></i>Keep me logged in</label>
                             </div>
                         </div>
-                    </section>
+                    </section> -->
                 </fieldset>
                 <footer class="text-right">
-                    <button type="submit" class="btn btn-info pull-right">Login</button>
+                    <button type="submit" class="btn btn-info pull-right">Save</button>
                     <!-- <a href="register.html" class="button button-secondary">Register</a> -->
                 </footer>
             </form>

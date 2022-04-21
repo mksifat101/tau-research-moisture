@@ -39,7 +39,7 @@
         <header class="main-header dark-bg">
 
             <!-- Logo -->
-            <a href="index.html" class="logo dark-bg">
+            <a href="{% url 'dashboard' %}" class="logo dark-bg">
                 <!-- mini logo for sidebar mini 50x50 pixels -->
                 <span class="logo-mini"><img src="{% static 'dist/img/logo.png' %}" alt="Ovio"></span>
                 <!-- logo for regular state and mobile devices -->
@@ -66,7 +66,7 @@
                 <!-- Navbar Right Menu -->
                 <div class="navbar-custom-menu">
                     <ul class="nav navbar-nav">
-                        <li class="dropdown messages-menu"> <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                        <!-- <li class="dropdown messages-menu"> <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                                 <i class="icon-envelope"></i>
                                 <div class="notify"> <span class="heartbit"></span> <span class="point"></span> </div>
                             </a>
@@ -106,11 +106,11 @@
                                 </li>
                                 <li class="footer"><a href="#">Check all notifications</a></li>
                             </ul>
-                        </li>
+                        </li> -->
                         <!-- messages-menu -->
 
                         <!-- Notifications Menu -->
-                        <li class="dropdown notifications-menu"> <a href="#" class="dropdown-toggle"
+                        <!-- <li class="dropdown notifications-menu"> <a href="#" class="dropdown-toggle"
                                 data-toggle="dropdown"> <i class="icon-megaphone"></i>
                                 <div class="notify"> <span class="heartbit"></span> <span class="point"></span> </div>
                             </a>
@@ -130,7 +130,7 @@
                                 </li>
                                 <li class="footer"><a href="#">View all</a></li>
                             </ul>
-                        </li>
+                        </li> -->
                         <!-- Tasks Menu -->
                         <!-- User Account Menu -->
                         <li class="dropdown user user-menu"> <a href="#" class="dropdown-toggle" data-toggle="dropdown">
@@ -149,7 +149,7 @@
                                 <li role="separator" class="divider"></li>
                                 <li><a href="#"><i class="icon-gears"></i> Account Setting</a></li>
                                 <li role="separator" class="divider"></li>
-                                <li><a href="#"><i class="fa fa-power-off"></i> Logout</a></li>
+                                <li><a href="{% url 'logout' %}"><i class="fa fa-power-off"></i> Logout</a></li>
                             </ul>
                         </li>
                     </ul>
@@ -157,13 +157,16 @@
             </nav>
         </header>
 
+        <!-- Load Sidebar Menu Bar -->
+        {% include 'includes/navbar.html' %}
+
         {% block content %}
         {% endblock %}
 
         <!-- Main Footer -->
         <footer class="main-footer dark-bg">
-            <div class="pull-right hidden-xs"> Version 1.0</div>
-            Copyright &copy; 2017 Yourdomian. All rights reserved.
+            <div class="pull-right hidden-xs"> Version 3.0</div>
+            Copyright &copy; 2022 Tau Research. All rights reserved.
         </footer>
     </div>
     <!-- wrapper -->
